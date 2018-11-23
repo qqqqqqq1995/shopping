@@ -1,0 +1,9 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: product-server
+  datasource:
+    url: jdbc:mysql://192.168.29.128:3306/shopping_product?characterEncoding=utf8&serverTimezone=GMT%2B8
+    username: root
+    password: root
