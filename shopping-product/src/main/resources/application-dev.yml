@@ -1,0 +1,12 @@
+# 开发环境
+spring:
+  cloud:
+    config:
+      # 相当于git中的分支
+      label: product-server
+      # 多环境配置
+      profile: dev
+      discovery:
+        service-id: shopping-config
+      # 名称，默认使用 spring.application.name
+      #name: product-server

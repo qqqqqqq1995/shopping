@@ -1,8 +1,26 @@
 server:
   port: 8888
 spring:
+  application:
+    name: shopping-config
   cloud:
     config:
       server:
         git:
-          uri: =${HOME}/Desktop/config
+          # 配置git仓库的地址
+          search-paths: /
+          # git仓库地址下的相对地址，可以配置多个，用,分割。
+          uri: https://github.com/qqqqqqq1995/shopping-config.git
+          # git仓库的账号
+#          username:
+          # git仓库的密码
+#          password:
+eureka:
+  client:
+    # 表示是否将自己注册到Eureka Server，默认为true
+#    register-with-eureka: false
+    # 表示是否从Eureka Server获取注册信息，默认为true
+    fetch-registry: false
+    service-url:
+      # 设置eureka服务地址
+      defaultZone: http://localhost:8761/eureka

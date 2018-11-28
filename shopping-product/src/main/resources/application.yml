@@ -3,7 +3,14 @@ server:
 spring:
   application:
     name: product-server
-  datasource:
-    url: jdbc:mysql://192.168.29.128:3306/shopping_product?characterEncoding=utf8&serverTimezone=GMT%2B8
-    username: root
-    password: root
+  profiles:
+    active: dev
+eureka:
+  client:
+    # 表示是否将自己注册到Eureka Server，默认为true
+#    register-with-eureka: false
+    # 表示是否从Eureka Server获取注册信息，默认为true
+#    fetch-registry: false
+    service-url:
+      # 设置eureka服务地址
+      defaultZone: http://localhost:8761/eureka
